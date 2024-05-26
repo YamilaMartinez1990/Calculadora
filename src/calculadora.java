@@ -10,6 +10,8 @@
  */
 public class calculadora extends javax.swing.JFrame {
 
+    private Object removeAllElements;
+
     /**
      * Creates new form calculadora
      */
@@ -128,6 +130,11 @@ public class calculadora extends javax.swing.JFrame {
         });
 
         btnC.setText("C");
+        btnC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -221,6 +228,13 @@ public class calculadora extends javax.swing.JFrame {
         double Num2 = Double.parseDouble(numDos.getText());   
         resultadoText.setText(String.valueOf(Num1 / Num2));
     }//GEN-LAST:event_btnDivActionPerformed
+
+    private void btnCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCActionPerformed
+        // TODO add your handling code here:
+        double Num1 = Double.parseDouble(numUno.getText());
+        double Num2 = Double.parseDouble(numDos.getText());   
+        resultadoText.setText(String.valueOf(removeAllElements));
+    }//GEN-LAST:event_btnCActionPerformed
 
     /**
      * @param args the command line arguments
